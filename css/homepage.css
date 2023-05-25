@@ -181,6 +181,16 @@ header{
     background: rgb(240, 4, 4);
     border-radius: 6px;
     color: white;
+    
+}
+
+.logo-icon span{
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20
+    
 }
 
 .logo a{
@@ -326,11 +336,11 @@ header{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -2px;
+    right: -2px;
 
-    width: 16px;
-    height: 16px;
+    width: 13px;
+    height: 13px;
     padding: 1px;
     border-radius: 50%;
     background: red;
@@ -338,6 +348,7 @@ header{
     content: "23";
     font-size: .7em;
     color: white;
+    border: 3px solid var(--color-main);
 }
 
 .notificacoes:hover:after{
