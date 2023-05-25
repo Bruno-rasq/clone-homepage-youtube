@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone.YT</title>
+
+    <!-- LINKS CSS E MEDIA QUERY-->
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/mediasQueries.css">
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script src="js/homepage.js" defer></script>
+
+    <!-- GOOGLE ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="menuAndLogo" id="menu-logo">
+            <span class="material-symbols-outlined toggle" id="burguer">
+                menu
+            </span>
+            <div class="logo">
+                <div class="logo-icon">&#x25B6;</div>
+                <a href="HomePage.html">Clone.YT</a>
+            </div>
+
+        </div>
+
+        <div class="nav-busca">
+            <div class="pesquisa">
+
+                <input type="search" name="buscar" id="buscar" placeholder="Pesquisar">
+                <button type="submit">
+                    <abbr title="Buscar">
+                        <span class="material-symbols-outlined" id="buscar-icon">
+                            search
+                        </span>
+                    </abbr>
+                </button>
+            </div>
+
+            <div class="audio">
+                <span class="material-symbols-outlined" id="mic-icon">
+                    mic
+                </span>
+            </div>
+        
+        </div>
+
+        <div class="login">
+
+            <div class="icon-login search" >
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </div>
+
+            <div class="icon-login mic">
+                <span class="material-symbols-outlined">
+                    mic
+                </span>
+            </div>
+            
+            <div class=" icon-login camera">
+                <span class="material-symbols-outlined">
+                    video_call
+                </span>
+            </div>
+
+            <div class=" icon-login notificacoes">
+                <span class="material-symbols-outlined">
+                    notifications
+                    </span>
+            </div>
+
+            <abbr title="Perfil">
+                <div class=" icon-login user" onclick="perfil()">
+                    <span class="material-symbols-outlined">
+                        person
+                        </span>
+                </div>
+            </abbr>
+            
+        </div>
+
+    </header>
+
+    <!-- ESTA DIV SERA`ABERTA QUANDO USUÀRIO CLICAR NO ICONE DE PERFIL -->
+    <div class="perfil-icon" id="perfil-icon-div">
+        <div class="perfil-fixed">
+            <div class="perfil-top">
+                <div class="icone-perfil-top">
+                    <span class="material-symbols-outlined icon">person</span>
+                </div>
+                <div class="emails-perfil-top">
+                    <p>Nome-do-Perfil</p>
+                    <p>@email_do_Perfil</p>
+                    <a href="#">Gerenciar sua conta Google</a>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="perfil-nav">
+
+            <div class="sec">
+                <ul class="perfil-links">
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">account_box</span>
+                            <span class="text nav-text">Seu Canal</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">play_circle</span>
+                            <span class="text nav-text">Vlogger.io Studio</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">switch_account</span>
+                            <span class="text nav-text">Alterar conta</span>
+                        </a>
+                        <span class="material-symbols-outlined icon">chevron_right</span>
+                    </li>
+
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">logout</span>
+                            <span class="text nav-text">Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sec">
+                <ul class="perfil-links">
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">monetization_on</span>
+                            <span class="text nav-text">Compras e Assinaturas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">contact_page</span>
+                            <span class="text nav-text">Seus dados no Vlogger.io</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sec">
+                <ul class="perfil-links">
+                    <li class="nav-links-perfil">
+                        <!--a href="#">
+                            <span class="material-symbols-outlined icon">nightlight</span>
+                            <span class="text nav-text">Aparência: Claro</span>
+                        </a>
+                        <span class="material-symbols-outlined icon">chevron_right</span-->
+
+                        <button class="thema-homepage" id="theme-homepage">
+                            <div class="aparencia-btn">
+                                <span class="material-symbols-outlined icon">nightlight</span>
+                                <span class="text nav-text" id="text-btn-theme">Aparência: Claro</span>  
+                            </div>
+
+                            <div>
+                                <span class="material-symbols-outlined icon">chevron_right</span>
+                            </div>
+                        </button>
+                    </li>
+
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">translate</span>
+                            <span class="text nav-text">Idioma: Português</span>
+                        </a>
+                        <span class="material-symbols-outlined icon">chevron_right</span>
+                    </li>
+
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">admin_panel_settings</span>
+                            <span class="text nav-text">Modo restrito: Desativado</span>
+                        </a>
+                        <span class="material-symbols-outlined icon">chevron_right</span>
+                    </li>
+
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">language</span>
+                            <span class="text nav-text">Local: Brasil</span>
+                        </a>
+                        <span class="material-symbols-outlined icon">chevron_right</span>
+                    </li>
+
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">keyboard_alt</span>
+                            <span class="text nav-text">Atalhos do teclado.</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sec">
+                <ul class="perfil-links">
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">settings</span>
+                            <span class="text nav-text">Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sec">
+                <ul class="perfil-links">
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">help</span>
+                            <span class="text nav-text">Ajuda</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-links-perfil">
+                        <a href="#">
+                            <span class="material-symbols-outlined icon">live_help</span>
+                            <span class="text nav-text">Enviar Feedback</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <!--SIDEBAR_NAVEGADOR-->
+    <nav class="sidebar close">
+        <div class="menu-sidebar" id="sec01-sidebar">
+            <ul class="links-sidebar">
+                <li class="sidebar-li">
+                    <a href="pagManu.html">
+                        <span class="material-symbols-outlined sidebar-icon sidebar-active">Home</span>
+                        <span class="sidebar-text">Inicio</span> 
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="pagManu.html">
+                        <span class="material-symbols-outlined sidebar-icon">stack_star</span>
+                        <span class="sidebar-text">Shorts</span> 
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="pagManu.html">
+                        <span class="material-symbols-outlined sidebar-icon">subscriptions</span>
+                        <span class="sidebar-text">Inscrições</span> 
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="menu-sidebar" id="sec02-sidebar">
+            <ul class="links-sidebar">
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">video_library</span>
+                        <span class="sidebar-text">Biblioteca</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">history</span>
+                        <span class="sidebar-text">Histórico</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">smart_display</span>
+                        <span class="sidebar-text">Seus videos</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">movie</span>
+                        <span class="sidebar-text">Seus filmes</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">schedule</span>
+                        <span class="sidebar-text">Assistir mais tarde</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">cut</span>
+                        <span class="sidebar-text">Seus clips</span>
+                    </a>
+                </li>
+
+                <!--Este botão quando clickado deve:
+                mudar o display da div playlist para block
+                desaparecer-->
+
+                <button class="sidebar-btn" id="expand-more">
+                    <span class="material-symbols-outlined sidebar-icon">expand_more</span>
+                    <span class="btn-sidebar-text">Mostrar Mais</span> 
+                </button>
+
+            </ul>
+
+            <div class="playlists-sidebar" id="playlists">
+                <ul class="links-sidebar">
+                    <li class="sidebar-li">
+                        <a href="#">
+                            <span class="material-symbols-outlined sidebar-icon">thumb_up</span>
+                            <span class="sidebar-text">Videos marcados com gostei</span>
+                        </a>
+                    </li>
+                    
+                    <li class="sidebar-li">
+                        <a href="#">
+                            <span class="material-symbols-outlined sidebar-icon">playlist_play</span>
+                            <span class="sidebar-text">Playlist01</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-li">
+                        <a href="#">
+                            <span class="material-symbols-outlined sidebar-icon">playlist_play</span>
+                            <span class="sidebar-text">Playlist02</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-li">
+                        <a href="#">
+                            <span class="material-symbols-outlined sidebar-icon">playlist_play</span>
+                            <span class="sidebar-text">Playlist03</span>
+                        </a>
+                    </li>
+
+                    <!--Este botão deve
+                    quando clickado ocultar a div playlist
+                    habilitar botão de mostrar mais-->
+
+                    <button class="sidebar-btn" id="expand-less">
+                        <span class="material-symbols-outlined sidebar-icon">expand_less</span>
+                        <span class="btn-sidebar-text">Mostrar Menos</span> 
+                    </button>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="menu-sidebar" id="sec03-sidebar">
+            <p>Inscrições</p>
+            <ul class="links-sidebar">
+                <li class="sidebar-li">
+                    <a href="#">
+                        <div class="icon-canal"></div>
+                        <span class="sidebar-text">Canal 001</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <div class="icon-canal"></div>
+                        <span class="sidebar-text">Canal 002</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <div class="icon-canal"></div>
+                        <span class="sidebar-text">Canal 003</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <div class="icon-canal"></div>
+                        <span class="sidebar-text">Canal test</span>
+                    </a>
+                </li>
+
+                <button class="sidebar-btn" id="more-channel">
+                    <span class="material-symbols-outlined">expand_more</span>
+                    <span class="btn-sidebar-text">Mostrar Mais</span> 
+                </button>
+
+            </ul>
+
+            <!--nesta div contem todos os canais que não aparecem de inicio 
+                no navegador, tendo um limiti inicial de 3 canais, mais que isso
+                habilita o botão que habilita essa div-->
+            <div class="channels-sidebar" id="channels-sidebar">
+                <ul class="links-sidebar">
+                    <li class="sidebar-li">
+                        <a href="#">
+                            <div class="icon-canal"></div>
+                            <span class="sidebar-text">Canal Extra</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-li">
+                        <a href="#">
+                            <div class="icon-canal"></div>
+                            <span class="sidebar-text">Canal Extra</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-li">
+                        <a href="#">
+                            <div class="icon-canal"></div>
+                            <span class="sidebar-text">Canal Extra</span>
+                        </a>
+                    </li>
+
+                    <button class="sidebar-btn" id="less-chanel">
+                        <span class="material-symbols-outlined">expand_less</span>
+                        <span class="btn-sidebar-text">Mostrar Menos</span> 
+                    </button>
+                </ul>
+            </div>
+        </div>
+
+        <div class="menu-sidebar" id="sec04-sidebar">
+            <p>Explorar</p>
+            <ul class="links-sidebar">
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">local_fire_department</span>
+                        <span class="sidebar-text">Em Alta</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">local_mall</span>
+                        <span class="sidebar-text">Shopping</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">library_music</span>
+                        <span class="sidebar-text">Música</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">movie_filter</span>
+                        <span class="sidebar-text">Filmes & Programas</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">cell_tower</span>
+                        <span class="sidebar-text">Ao vivo</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">sports_esports</span>
+                        <span class="sidebar-text">Jogos</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">newspaper</span>
+                        <span class="sidebar-text">Noticias</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">sports_basketball</span>
+                        <span class="sidebar-text">Esportes</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">local_library</span>
+                        <span class="sidebar-text">Aprender</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-sidebar" id="sec05-sidebar">
+            <ul class="links-sidebar">
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">settings</span>
+                        <span class="sidebar-text">Configurações</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">flag</span>
+                        <span class="sidebar-text">Histórico de Denúncias</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">info</span>
+                        <span class="sidebar-text">Ajuda</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-li">
+                    <a href="#">
+                        <span class="material-symbols-outlined sidebar-icon">live_help</span>
+                        <span class="sidebar-text">Enviar Feedback</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SECTION GUIA & MENU-->
+    <section class="home">
+
+        <!-- GUIA -->
+        <div class="container close">
+            <button class="arrow-left control" aria-label="previous">
+                <span class="material-symbols-outlined">
+                    arrow_back_ios
+                </span>
+            </button>
+            <button class="arrow-right control" aria-label="next">
+                <span class="material-symbols-outlined">
+                    arrow_forward_ios
+                </span>
+            </button>
+
+            <div class="conteudo-wrapper">
+                <div class="botoes">
+                    <button class="item current-item  explore-btn"><span class="material-symbols-outlined">
+                        explore
+                        </span>
+                    </button>
+                    <button class="item current-item active">Tudo</button>
+                    <button class="item current-item">Mixes</button>
+                    <button class="item current-item">Música</button>
+                    <button class="item current-item">Ao vivo</button>
+                    <button class="item current-item">Podcast</button>
+                    <button class="item current-item">Cursos</button>
+                    <button class="item current-item">assistidos</button>
+                    <button class="item current-item">Cascading Style Sheets</button>
+                    <button class="item current-item">filmes</button>
+                    <button class="item current-item">Esportes</button>
+                    <button class="item current-item">Noticias</button>
+                    <button class="item current-item">Noticias Mundiais</button>
+                    <button class="item current-item">Relacionamentos</button>
+                    <button class="item current-item">Hoje</button>
+                    <button class="item current-item">Tecnólogia</button>
+                    <button class="item current-item">Rock</button>
+                    <button class="item current-item">Hard rock</button>
+                    <button class="item current-item">Pop rock</button>
+                    <button class="item current-item">Cover</button>
+                    <button class="item current-item">Relacionados</button>
+                    <button class="item current-item">inteligência artificial</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- AQUI FICAM OS CONTEÙDOS VIDEOS/SHORTS-->
+        <main>
+            <div class="videos-conteudo">
+                <div class="videos-wrapper">
+
+                    <div class="sec-videos sec01-video">
+
+                        <div class="video">
+                            <div class="thumb-video">
+
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>4:45</p>
+                                </div>
+                                <div class="porcent-time-video"></div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>91 mil visualizações</p>
+                                        <p> &bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="video">
+                            <div class="thumb-video">
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>2:05</p>
+                                </div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="playlist">
+                            <div class="thumb-playlist">
+                                <div class="thumb-playlist-views">
+                                    <p>2,7 MIL</p>
+                                    <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                </div>
+                            </div>
+
+                            <div class="info-playlist">
+                                <!--div class="perfil-channel"></div-->
+
+                                <div class="tittle-playlist">
+                                    <h3>Titulo-da-playlist</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-playlist">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-playlist">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="close-shorts" id="msm-close-shorts">
+                        <p>Esta sessão ficará oculta por 30 dias.</p>
+                        <button class="remake-short-btn" id="remake-short-btn">Desfazer</button>
+                    </div>
+                    <div class="sec-shorts" id="sec01-shorts">
+                        <div class="short-top">
+                            <p>&#9654; Shorts</p>
+                            <button id="desabilitar-shorts">
+                                <span class="material-symbols-outlined">close</span>
+                            </button>
+                        </div>
+
+                        <div class="shortd-conteudo">
+                            
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="shorts-more">
+                            <button id="short-btn-more">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button>
+                        </div>
+
+                        <div class="sec-shorts-extra" id="more-shorts">
+
+                            <div class="shortd-conteudo">
+
+                                <div class="short">
+                                    <div class="thumb-short"></div>
+    
+                                    <div class="info-short">
+                                        <div class="tittle-short">
+                                            <h3>Titulo_short</h3>
+                                            <p>191 mil visualizações...</p>
+                                        </div>
+    
+                                        <div class="config-short">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+                                
+                                <div class="short">
+                                    <div class="thumb-short"></div>
+    
+                                    <div class="info-short">
+                                        <div class="tittle-short">
+                                            <h3>Titulo_short</h3>
+                                            <p>191 mil visualizações...</p>
+                                        </div>
+    
+                                        <div class="config-short">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+
+                                <div class="short">
+                                    <div class="thumb-short"></div>
+    
+                                    <div class="info-short">
+                                        <div class="tittle-short">
+                                            <h3>Titulo_short</h3>
+                                            <p>191 mil visualizações...</p>
+                                        </div>
+    
+                                        <div class="config-short">
+                                            <span class="material-symbols-outlined">more_vert</span>
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+
+                            </div>
+
+                            <div class="short-less">
+                                <button id="short-btn-less">
+                                    <span class="material-symbols-outlined">expand_less</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="sec-videos">
+
+                        <div class="playlist">
+                            <div class="thumb-playlist">
+                                <div class="thumb-playlist-views">
+                                    <p>2,7 MIL</p>
+                                    <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                </div>
+                            </div>
+
+                            <div class="info-playlist">
+                                <!--div class="perfil-channel"></div-->
+
+                                <div class="tittle-playlist">
+                                    <h3>Titulo-da-playlist</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-playlist">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-playlist">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="video">
+                            <div class="thumb-video">
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>10:45</p>
+                                </div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--div class="video">
+                            <div class="thumb-video">
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>6:43</p>
+                                </div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div-->
+                    </div>
+
+                    <div class="sec-videos">
+                        <div class="video">
+                            <div class="thumb-video">
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>3:45</p>
+                                </div>
+                                <div class="porcent-time-video"></div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="video">
+                            <div class="thumb-video">
+
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>1:00</p>
+                                </div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="video">
+                            <div class="thumb-video">
+
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>4:45</p>
+                                </div>
+                                <div class="porcent-time-video"></div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sec-shorts">
+                        <div class="short-top">
+                            <p>&#9654; Shorts</p>
+                            <button>
+                                <span class="material-symbols-outlined">close</span>
+                            </button>
+                        </div>
+
+                        <div class="shortd-conteudo">
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div-->
+
+                            <!--div class="short">
+                                <div class="thumb-short"></div>
+
+                                <div class="info-short">
+                                    <div class="tittle-short">
+                                        <h3>Titulo_short</h3>
+                                        <p>191 mil visualizações...</p>
+                                    </div>
+
+                                    <div class="config-short">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </div>
+
+                                </div>
+                            </div-->
+
+                        </div>
+
+                        <!--div class="shorts-more">
+                            <button>
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button>
+                        </div-->
+                    </div>
+
+                    <div class="sec-videos">
+                        <div class="video">
+                            <div class="thumb-video">
+
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>3:35</p>
+                                </div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="playlist">
+                            <div class="thumb-playlist">
+                                <div class="thumb-playlist-views">
+                                    <p>2,7 MIL</p>
+                                    <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                </div>
+                            </div>
+
+                            <div class="info-playlist">
+                                <!--div class="perfil-channel"></div-->
+
+                                <div class="tittle-playlist">
+                                    <h3>Titulo-da-playlist</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-playlist">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-playlist">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="video">
+                            <div class="thumb-video">
+
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>8:15</p>
+                                </div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sec-videos">
+                        <!--div class="video">
+                            <div class="thumb-video">
+
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>4:45</p>
+                                </div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div-->
+
+                        <div class="video">
+                            <div class="thumb-video">
+
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+
+                                <div class="video-time">
+                                    <p>5:55</p>
+                                </div>
+                                <div class="porcent-time-video"></div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="video">
+                            <div class="thumb-video">
+
+                                <div class="icones-thumb-video">
+                                    <div class="thumb-video-clock">
+                                        <span class="material-symbols-outlined">
+                                            schedule
+                                        </span>
+                                    </div>
+                                    <div class="thumb-videp-playlist">
+                                        <span class="material-symbols-outlined playlist-icon">playlist_play</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="video-time">
+                                    <p>44:44</p>
+                                </div>
+                            </div>
+
+                            <div class="info-video">
+                                <div class="perfil-channel"></div>
+
+                                <div class="tittle-video">
+                                    <h3>Titulo-do-video</h3>
+                                    <p>Nome do canal</p>
+                                    <div class="data-video">
+                                        <p>191 mil visualizações</p>
+                                        <p>&bull; 1 ano</p>
+                                    </div>
+                                </div>
+
+                                <div class="config-video">
+                                    <span class="material-symbols-outlined">more_vert</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <nav class="nav-footer">
+                <a href="#" class="link-footer">
+                    <span class="material-symbols-outlined footer-icon footer-icon-active">Home</span>
+                    <span class="footer-text">Inicio</span> 
+                </a>
+
+                <a href="#" class="link-footer">
+                    <span class="material-symbols-outlined footer-icon">stack_star</span>
+                    <span class="footer-text">Shorts</span> 
+                </a>
+
+                <button class="footer-more-btn">
+                    <span class="material-symbols-outlined">
+                        add_circle
+                    </span>
+                </button>
+
+
+                <a href="#" class="link-footer">
+                    <span class="material-symbols-outlined footer-icon">subscriptions</span>
+                    <span class="footer-text">Inscrições</span>
+                </a>
+
+                <a href="#" class="link-footer">
+                    <span class="material-symbols-outlined footer-icon">video_library</span>
+                    <span class="footer-text">Biblioteca</span>
+                </a>
+
+            </nav>
+            
+        </footer>
+    </section>
+    
+    
+</body>
+</html>

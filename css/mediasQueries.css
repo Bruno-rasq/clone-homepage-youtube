@@ -1,0 +1,339 @@
+/*
+Breakpoints comuns: existe uma resolução padrão?
+
+320px — 480px: dispositivos móveis.
+481px — 768px: iPads, tablets.
+769px — 1024px: telas pequenas, laptops.
+1025px — 1200px: desktops, telas grandes.
+1201px e acima — telas muito grandes, TVs.
+
+*/
+
+@media screen and (min-width: 480px) and (max-width: 767px){
+
+    /* -------------- MENU E LOGO  ---------------------- */
+    .menuAndLogo{
+        width: 150px;
+    
+    }
+
+    .menuAndLogo #burguer{
+        display: none;
+        margin-right: 10px;
+    }
+
+    .logo-icon{
+        margin-right: 8px;
+    }
+    
+    /* ------------------- NAVEGADOR [BUSCADOR] ----------------------*/
+    .nav-busca{
+        display: none;
+
+    }
+
+    /* ------------------- LOGIN ----------------------*/
+
+    .login{
+        width: 190px;
+
+    }
+
+    .search{
+        display: flex;
+    }
+
+    /* ================================================= */
+
+    /* ================ DIV ONCLICK PERFIL ============ */
+
+    .perfil-icon{
+        right: 70px;
+
+    }
+
+    /* ================================================= */
+
+    /* [esta sessão é só para testar o conteudo sem o sidebar]*/
+    .sidebar{
+        display: none;
+    }
+
+    .sidebar.close ~ .home{
+        left: 0px;
+        width: 100%;
+    }
+
+    .home{
+        left: 0px;
+        top: 10vh;
+        height: 100vh;
+        width: 100%;
+        
+    }
+
+    /* ================================================= */
+
+    /* ==================== [VIDEOS] ============================ */
+
+    .sec-videos{
+        flex-direction: column;
+        margin-bottom: 0px;
+        margin-top: 20px;
+        
+    }
+
+    .video{
+        margin-bottom: 20px;
+        
+    }
+
+    .playlist{
+        margin-bottom: 20px;
+        
+    }
+
+    .sec-shorts{
+        display: flex;
+        
+    }
+
+    .shortd-conteudo{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+        height: 350px;
+        overflow-x: auto;
+
+    }
+
+    .shortd-conteudo::-webkit-scrollbar {
+        height: 6px;               /* width of the entire scrollbar */
+    }
+    
+    .shortd-conteudo::-webkit-scrollbar-track {
+        background: var(--color-main);        /* color of the tracking area */
+
+    }
+    
+    .shortd-conteudo::-webkit-scrollbar-thumb {
+        background: var(--sidebar-color);    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 3px solid var(--sidebar-color);  /* creates padding around scroll thumb */
+        
+    }
+
+    .shortd-conteudo .short{
+        display: flex;
+        width: 25%;
+        height: 95%;
+        cursor: pointer;
+    }
+
+    .shortd-conteudo .short:nth-child(0),
+    .shortd-conteudo .short:nth-child(1){
+        display: none;
+    }
+
+    .thumb-playlist .thumb-playlist-views{
+        display: flex;
+        position: absolute;
+        top: 86%;
+        
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        content: "";
+        color: white;
+        width: 100%;
+        height: 14%;
+        background: rgba(0, 0, 0, 0.753);
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    main{
+        height: 72%;
+    
+    }
+
+    .home footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+
+        position: relative;
+        bottom: 0px;
+        left: 0;
+        z-index: 9999;
+
+        height: 10vh;
+        width: calc(100% - 5px);
+        background: var(--color-main);
+        
+    }
+
+    .nav-footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .link-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 75px;
+        color: var(--text-color);
+        
+    }
+
+    .link-footer:hover{
+        background: var(--hover-color);
+    }
+
+    .link-footer .footer-icon{
+        font-size: 28px;
+    }
+
+    .link-footer .footer-text{
+        font-size: .6em;
+    }
+
+    .footer-more-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 60px;
+        height: 90%;
+
+        background: var(--color-main);
+        color: var(--text-color);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+    }
+
+    .footer-more-btn:hover span{
+        font-size: 55px;
+    }
+
+    .footer-more-btn span{
+        display: flex;
+        font-size: 50px;
+    
+    }
+
+    .footer-icon-active{
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 250
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    /* -------------- MENU E LOGO  ---------------------- */
+    .menuAndLogo{
+        width: 110px;
+        
+    }
+
+    .menuAndLogo #burguer{
+        margin-right: 6px;
+    }
+
+    .logo .logo-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 20px;
+        margin-right: 8px;
+    }
+
+    .logo a{
+        font-size: 1.3em;
+    }
+
+    /* ------------------- NAVEGADOR [BUSCADOR] ----------------------*/
+    .nav-busca{
+        width: 280px;
+
+    }
+
+    .nav-busca .pesquisa{
+        
+        width:380px;
+        height: 35px;
+        margin-right: 4px;
+        padding-right: 0px;
+        
+    
+    }
+
+    /* ------------------- LOGIN ----------------------*/
+
+    .login{
+        width: 120px;
+    
+    }
+
+    /* ======================================== */
+
+    /* ============= [ CONTEUDO ] ============== */
+
+    .home footer{
+        display: none;
+    }
+    
+    .sec-videos{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .video{
+        width: 300px;
+        height: 250px;
+        
+    }
+
+    .playlist{
+        width: 300px;
+        height: 250px;
+        
+    }
+
+    .shortd-conteudo{
+        flex-wrap: nowrap;
+        gap: 10px;
+    
+        width: 98%;
+        height: 350px;
+        overflow-x: auto;
+    }
+
+    .shortd-conteudo .short{
+        display: flex;
+        
+        width: 100px;
+        height: 95%;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1024px){}
+@media (min-width: 1280px){}
+@media (min-width: 1536px){}

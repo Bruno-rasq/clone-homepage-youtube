@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+
+    background-image: linear-gradient(to right, white, rgb(206, 206, 206));
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+.storyset{
+    text-decoration: none;
+    color: rgb(115, 235, 46);
+    font-size: 1.5em;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+
+    /*background-color: red;*/
+    width: 80%;
+    height: 75%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+
+    /*background-color: blue;*/
+}
+
+.imagem-oops{
+
+    width: 100%;
+    height: 100%;
+
+    background-color: lightgray;
+    background-size: cover;
+}
+
+.msm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 40%;
+    padding: 30px;
+
+    background-color: rgba(255, 255, 255, 0.486); 
+}
+
+.msm > h1{
+    font-size: 2.5em;
+}
+
+h1::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.conteudo > h3{
+    color: greenyellow;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+.conteudo > p{
+    font-size: .8em;
+    text-align: center;
+}
+
+.btn-back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40px;
+    border: none;
+    box-shadow: 2px 2px 5px gray;
+    
+    background-color: rgb(140, 223, 72);
+    color: white;
+
+}
+
+.btn-back:hover{
+    background-color: rgb(103, 167, 52);
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        height: 90vh;
+        
+    }
+
+    .imagem{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40%;
+        width: 100%;
+    
+        /*background-color: blue;*/
+    }
+
+    .msm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 60%;
+        width: 100%;
+        padding: 30px;
+    
+        background-color: rgba(255, 255, 255, 0.486); 
+    }
+}
