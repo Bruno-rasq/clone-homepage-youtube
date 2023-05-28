@@ -20,13 +20,16 @@ Neste projetinho utilizei conceitos de:
 * Media queries;
 * ForEach;
 * addEventListenner;
+* modal
 
 O projeto ainda pode mudar/melhorar conforme for adquirindo mais conhecimento para resolver alguns problemas, lembrando que fiz como um estudo sem copiar código pronto.
 
 Ideias para aprimorar futuramente:
 * Grid;
 * Scroll Infinito;
-* Renderização de elementos
+* separação de componentes;
+* reutilização de componentes;
+
 
 
 
