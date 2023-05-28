@@ -84,7 +84,7 @@
             </div>
 
             <abbr title="Perfil">
-                <div class=" icon-login user" onclick="perfil()">
+                <div class=" icon-login user" id="open-modal">
                     <span class="material-symbols-outlined">
                         person
                         </span>
@@ -96,7 +96,8 @@
     </header>
 
     <!-- ESTA DIV SERA`ABERTA QUANDO USUÀRIO CLICAR NO ICONE DE PERFIL -->
-    <div class="perfil-icon" id="perfil-icon-div">
+    <div id="fade" class="hide"></div>
+    <div class="perfil-icon hide" id="perfil-icon-div">
         <div class="perfil-fixed">
             <div class="perfil-top">
                 <div class="icone-perfil-top">

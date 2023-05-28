@@ -1,15 +1,17 @@
 //============ HEADER ============
 
 // ========= PERFIL DIV =======
-let divPerfil = document.getElementById("perfil-icon-div");
+const divPerfil = document.getElementById("perfil-icon-div");
+const fade = document.querySelector("#fade");
+const openmodal = document.querySelector("#open-modal");
 
-function perfil() {
-    if(divPerfil.style.display == 'none'){
-        divPerfil.style.display = 'flex';
-    } else {
-        divPerfil.style.display = 'none';
-    }
+const togglemodal = () => {
+    [divPerfil, fade].forEach((el) => el.classList.toggle("hide"));
 };
+
+[openmodal, fade].forEach((el) => {
+    el.addEventListener("click", () => togglemodal());
+})
 
 
 //=========== SIDEBAR NAVEGADOR =============

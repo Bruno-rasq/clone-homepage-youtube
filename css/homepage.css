@@ -365,9 +365,29 @@ header{
 /* ================================================= */
 
 /* ================ DIV ONCLICK PERFIL ============ */
+#fade, .perfil-icon{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade.hide, .perfil-icon.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 999;
+}
 
 .perfil-icon{
-    display: none; /* flex = habilita // none = desabilita*/
+    /*display: none; flex = habilita // none = desabilita*/
     flex-direction: column;
     overflow-y: hidden;
     white-space: nowrap;
@@ -378,7 +398,7 @@ header{
     height: 95%;
     border: none;
     border-radius: 13px;
-    box-shadow: 0px 0px 15px var(--color-shadow);
+    /*box-shadow: 0px 0px 15px var(--color-shadow);*/
     transition: var(--trans-04);
 
     position: fixed;
@@ -755,7 +775,8 @@ a .nav-text{
 
     position: relative;
 
-    width: calc(99.8% - 0px);
+    /*width: calc(99.8% - 0px);*/
+    width: 100%;
     height: 50px;
     padding-left: 15px;
     transition: var(--trans-04);
@@ -853,7 +874,8 @@ main{
     z-index: 200;
     position: relative;
 
-    width: calc(100% - 5px);
+    /*width: calc(100% - 5px);*/
+    width: 100%;
     height: 82%;
     background: var(--color-main);
     transition: var(--trans-04);
